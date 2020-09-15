@@ -12,7 +12,7 @@ class Transaction {
   constructor({ title, value, type }: Omit<Transaction, 'id'>) {
     this.id = uuid();
     this.title = title;
-    this.value = value;
+    this.value = Number(value);
     this.type = type;
   }
 }
